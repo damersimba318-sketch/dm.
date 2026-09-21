@@ -1,6 +1,6 @@
 /* ============================================================
    dm. — script.js
-   Языки (EN/RU) + бургер
+   Языки (EN/RU) + бургер + прелоадер + категории магазина
    ============================================================ */
 
 const I18N = {
@@ -43,8 +43,13 @@ const I18N = {
     unreleased_album: 'Album: CesoR',
     unreleased_song:  'Song: CesoR',
 
-    shop_closed:      'closed',
-    shop_title:       'Shop temporarily closed',
+    shop_lead:        'Choose a category — everything will appear here soon.',
+    shop_merch:       'Merch',
+    shop_merch_sub:   'Clothes & accessories',
+    shop_cds:         'CD & Cassettes',
+    shop_cds_sub:     'Physical releases',
+    shop_soon:        'Coming soon',
+    shop_soon_sub:    'Everything will be here soon',
 
     socials_desc:     'All links in one place — open whatever you like.'
   },
@@ -88,8 +93,13 @@ const I18N = {
     unreleased_album: 'Альбом: CesoR',
     unreleased_song:  'Песня: CesoR',
 
-    shop_closed:      'закрыто',
-    shop_title:       'Магазин временно закрыт',
+    shop_lead:        'Выбери категорию — скоро всё здесь появится.',
+    shop_merch:       'Мерч',
+    shop_merch_sub:   'Одежда и аксессуары',
+    shop_cds:         'CD и Аудиокассеты',
+    shop_cds_sub:     'Физические релизы',
+    shop_soon:        'Скоро всё будет',
+    shop_soon_sub:    'Совсем скоро здесь появятся товары',
 
     socials_desc:     'Все ссылки в одном месте — открой, что ближе.'
   }
@@ -100,11 +110,28 @@ const STORAGE_KEY = 'dm-lang';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- ПРЕЛОАДЕР ---------- */
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    const hide = () => {
+      preloader.classList.add('hidden');
+      setTimeout(() => { preloader.style.display = 'none'; }, 700);
+    };
+    if (document.readyState === 'complete') {
+      setTimeout(hide, 900);
+    } else {
+      window.addEventListener('load', () => setTimeout(hide, 900));
+      setTimeout(hide, 3500); // fallback
+    }
+  }
+
+  /* ---------- ЭЛЕМЕНТЫ ---------- */
   const burgerBtn = document.getElementById('burgerBtn');
   const menu      = document.getElementById('mainMenu');
   const langBtns  = document.querySelectorAll('.lang-btn');
   const pageId    = document.body.dataset.page || 'home';
 
+  /* ---------- БУРГЕР ---------- */
   function closeMenu() {
     if (!menu) return;
     menu.classList.remove('open');
@@ -132,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- ЯЗЫК ---------- */
   function getSavedLang() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -142,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyLang(lang) {
     const dict = I18N[lang] || I18N[DEFAULT_LANG];
-
     document.documentElement.lang = lang;
 
     if (pageId === 'home' && dict.title_home) {
@@ -166,4 +193,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   applyLang(getSavedLang());
+
+  /* ---------- МАГАЗИН ---------- */
+  const shopCats    = document.querySelectorAll('.shop-cat');
+  const shopMessage = document.getElementById('shopMessage');
+
+  if (shopCats.length && shopMessage) {
+    shopCats.forEach(cat => {
+      cat.addEventListener('click', () => {
+        const isActive = cat.classList.contains('active');
+        shopCats.forEach(c => c.classList.remove('active'));
+
+        if (isActive) {
+          shopMessage.classList.remove('visible');
+        } else {
+          cat.classList.add('active');
+          shopMessage.classList.add('visible');
+        }
+      });
+    });
+  }
 });

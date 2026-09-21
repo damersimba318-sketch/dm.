@@ -8,9 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>#preloader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity .6s ease,visibility .6s ease}#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}</style>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="page-dm" data-page="dm">
+
+<div id="preloader"><div class="preloader-inner"><div class="preloader-logo">dm.</div><div class="preloader-bar"><span></span></div><div class="preloader-text">loading</div></div></div>
+
 <div class="bg-grid"></div><div class="bg-glow"></div><div class="bg-noise"></div>
 
 <header>
@@ -25,14 +29,14 @@
     </div>
   </div>
   <nav class="menu" id="mainMenu">
-    <a class="nav-link" href="../" data-page-link="home" data-i18n="nav_home">Home</a>
-    <a class="nav-link dm active" href="../dm-music/" data-page-link="dm" data-i18n="nav_dm">Damersimba Music</a>
-    <a class="nav-link onyx" href="../colonia-onyx/" data-page-link="onyx" data-i18n="nav_onyx">Colonia Onyx</a>
-    <a class="nav-link" href="../open-eyes/" data-page-link="eyes" data-i18n="nav_eyes">Open Eyes In The Game</a>
-    <a class="nav-link neyti" href="../neyti/" data-page-link="neyti" data-i18n="nav_neyti">Neyti</a>
-    <a class="nav-link" href="../unreleased/" data-page-link="unreleased" data-i18n="nav_unreleased">Unreleased</a>
-    <a class="nav-link" href="../shop/" data-page-link="shop" data-i18n="nav_shop">Shop</a>
-    <a class="nav-link" href="../socials/" data-page-link="socials" data-i18n="nav_socials">Socials</a>
+    <a class="nav-link" href="../" data-i18n="nav_home">Home</a>
+    <a class="nav-link dm active" href="../dm-music/" data-i18n="nav_dm">Damersimba Music</a>
+    <a class="nav-link onyx" href="../colonia-onyx/" data-i18n="nav_onyx">Colonia Onyx</a>
+    <a class="nav-link" href="../open-eyes/" data-i18n="nav_eyes">Open Eyes In The Game</a>
+    <a class="nav-link neyti" href="../neyti/" data-i18n="nav_neyti">Neyti</a>
+    <a class="nav-link" href="../unreleased/" data-i18n="nav_unreleased">Unreleased</a>
+    <a class="nav-link" href="../shop/" data-i18n="nav_shop">Shop</a>
+    <a class="nav-link" href="../socials/" data-i18n="nav_socials">Socials</a>
   </nav>
 </header>
 
@@ -53,7 +57,6 @@
       </div>
       <div class="split-body">
         <p class="lead" data-i18n="dm_desc">Just songs about music (soon I'll be doing vocals, I'm still thinking about it)</p>
-
         <div class="icon-links">
           <a class="icon-btn icon-dm" href="https://t.me/dmvair_official" target="_blank" rel="noopener" title="Telegram">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.6 18.9 19.1c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.95.46l.34-4.82 8.78-7.93c.38-.34-.08-.53-.6-.19L6.94 12.6 2.3 11.15c-1-.32-1.02-1 .21-1.49l18.1-6.98c.84-.31 1.57.19 1.33 1.92Z"/></svg>
@@ -67,10 +70,7 @@
   </section>
 </main>
 
-<footer>
-  <span>dm. © 2026</span>
-  <span class="footer-links"><a href="../socials/">Socials</a><a href="../shop/">Shop</a></span>
-</footer>
+<footer><span>dm. © 2026</span></footer>
 <script src="../script.js"></script>
 </body>
 </html>

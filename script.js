@@ -25,7 +25,7 @@ const I18N = {
     eyes_short:       'Nerdcore album about games.',
     neyti_short:      'Clips about streamer DadeGuy.',
 
-    dm_desc:          "Just songs about music (soon I'll be doing vocals, I'm still thinking about it)",
+    dm_desc:          "Just songs about games (soon I'll be doing vocals, I'm still thinking about it)",
 
     onyx_desc:        'Musical band from Bogoroditsk, Tula region. Genres: metalcore, alternative rock and rock. The band was influenced by the British group Onyx Colony (also known as Land Of Hell or Colony).',
     onyx_releases:    'Releases',
@@ -75,7 +75,7 @@ const I18N = {
     eyes_short:       'Нердкор-альбом про игры.',
     neyti_short:      'Нарезки по стримеру DadeGuy.',
 
-    dm_desc:          'Просто песни по музыке (скоро буду делать вокалы, я просто ещё думаю об этом)',
+    dm_desc:          'Просто песни по играм (скоро буду делать вокалы, я просто ещё думаю об этом)',
 
     onyx_desc:        'Музыкальная группа из Богородицка, Тульская область. Жанры: металкор, альтернативный рок и рок. На создание коллектива повлияла британская группа Onyx Colony (также известная как Land Of Hell или Colony).',
     onyx_releases:    'Релизы',
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(hide, 900);
     } else {
       window.addEventListener('load', () => setTimeout(hide, 900));
-      setTimeout(hide, 3500); // fallback
+      setTimeout(hide, 3500);
     }
   }
 

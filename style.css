@@ -85,7 +85,7 @@ body.page-neyti .avatar-wrap, body.page-neyti .avatar {
 }
 
 /* ============================================================
-   ПРЕЛОАДЕР — общий каркас
+   ПРЕЛОАДЕР
    ============================================================ */
 #preloader {
   position: fixed;
@@ -148,20 +148,16 @@ body.page-neyti .avatar-wrap, body.page-neyti .avatar {
 /* ============================================================
    ЦВЕТ ПРЕЛОАДЕРА ДЛЯ КАЖДОЙ СТРАНИЦЫ
    ============================================================ */
-
-/* ГЛАВНАЯ / МАГАЗИН / СОЦСЕТИ / НЕВЫПУЩЕННЫЕ — розово-фиолетовый */
 body.page-home .preloader-logo { text-shadow: 0 0 40px rgba(217,70,239,.55); }
 body.page-home .preloader-bar span {
   background: linear-gradient(90deg, transparent 0%, #d946ef 50%, transparent 100%);
 }
 
-/* DAMERSIMBA MUSIC — розово-фиолетовый */
 body.page-dm .preloader-logo { text-shadow: 0 0 40px rgba(217,70,239,.55); }
 body.page-dm .preloader-bar span {
   background: linear-gradient(90deg, transparent 0%, #d946ef 50%, transparent 100%);
 }
 
-/* COLONIA ONYX — красно-тёмный */
 body.page-onyx .preloader-logo {
   color: #ffb0b0;
   text-shadow: 0 0 45px rgba(255,42,42,.85);
@@ -171,7 +167,6 @@ body.page-onyx .preloader-bar span {
 }
 body.page-onyx .preloader-text { color: #7a2a2a; }
 
-/* OPEN EYES — янтарно-золотой */
 body.page-eyes .preloader-logo {
   color: #ffe0a8;
   text-shadow: 0 0 45px rgba(255,180,60,.85);
@@ -181,7 +176,6 @@ body.page-eyes .preloader-bar span {
 }
 body.page-eyes .preloader-text { color: #6a4a1a; }
 
-/* NEYTI — оранжево-золотой */
 body.page-neyti .preloader-logo {
   color: #ffd8a0;
   text-shadow: 0 0 45px rgba(255,154,31,.9);
@@ -421,14 +415,15 @@ main { flex: 1; position: relative; z-index: 1; }
   font-size: 10.5px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #a0a0a0;
+  color: #c8b8d8;
   padding: 8px 18px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid rgba(217,70,239,.35);
   border-radius: 100px;
   margin-bottom: 32px;
-  background: rgba(255,255,255,.02);
+  background: rgba(217,70,239,.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 24px rgba(217,70,239,.15);
 }
 .hero-title {
   font-family: 'Cinzel', serif;
@@ -443,18 +438,23 @@ main { flex: 1; position: relative; z-index: 1; }
 .hero-title .line1 {
   font-size: clamp(48px, 11vw, 130px);
   letter-spacing: .06em;
-  background: linear-gradient(180deg, #fff 0%, #b8b8b8 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ffd6f3 35%, #d946ef 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 100px rgba(217,70,239,.15);
+  text-shadow: 0 0 100px rgba(217,70,239,.35);
+  filter: drop-shadow(0 0 40px rgba(217,70,239,.25));
 }
 .hero-title .line2 {
   font-size: clamp(18px, 2.4vw, 32px);
   letter-spacing: .8em;
   padding-left: .8em;
-  color: #5a5a5a;
   text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 0%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 60px rgba(217,70,239,.3);
 }
 .hero-sub {
   font-size: 16px;

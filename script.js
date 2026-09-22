@@ -65,7 +65,7 @@ const I18N = {
     nav_shop:         'Магазин',
     nav_socials:      'Соцсети',
 
-    hero_eyebrow:     'независимый музык. коллектив',
+    hero_eyebrow:     'независимый музыкальный коллектив',
     hero_sub:         'Четыре проекта · одна сцена. Андерграунд из Тульской области.',
     scroll:           'вниз',
     home_projects:    'Проекты',
@@ -110,7 +110,6 @@ const STORAGE_KEY = 'dm-lang';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- ПРЕЛОАДЕР ---------- */
   const preloader = document.getElementById('preloader');
   if (preloader) {
     const hide = () => {
@@ -125,13 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ---------- ЭЛЕМЕНТЫ ---------- */
   const burgerBtn = document.getElementById('burgerBtn');
   const menu      = document.getElementById('mainMenu');
   const langBtns  = document.querySelectorAll('.lang-btn');
   const pageId    = document.body.dataset.page || 'home';
 
-  /* ---------- БУРГЕР ---------- */
   function closeMenu() {
     if (!menu) return;
     menu.classList.remove('open');
@@ -159,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- ЯЗЫК ---------- */
   function getSavedLang() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -194,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyLang(getSavedLang());
 
-  /* ---------- МАГАЗИН ---------- */
   const shopCats    = document.querySelectorAll('.shop-cat');
   const shopMessage = document.getElementById('shopMessage');
 

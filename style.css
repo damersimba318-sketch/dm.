@@ -362,7 +362,7 @@ footer {
   margin-top: auto;
 }
 
-/* ============ ССЫЛКА СТАРОЙ ВЕРСИИ (тихая) ============ */
+/* ============ ССЫЛКА СТАРОЙ ВЕРСИИ ============ */
 .old-version-btn {
   position: fixed;
   bottom: 18px;
@@ -382,8 +382,6 @@ footer {
   transition: color .25s ease;
   opacity: .7;
 }
-.old-version-btn::before { content: "· "; opacity: .5; }
-.old-version-btn::after  { content: " ·"; opacity: .5; }
 .old-version-btn:hover {
   color: #d946ef;
   opacity: 1;

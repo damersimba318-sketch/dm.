@@ -1,119 +1,103 @@
 /* ============================================================
    dm. — script.js
-   Языки (EN/RU) + бургер + категории магазина
    ============================================================ */
 
 const I18N = {
   en: {
-    title_home:       'dm. — music portfolio',
-    nav_home:         'Home',
-    nav_dm:           'Damersimba Music',
-    nav_onyx:         'Colonia Onyx',
-    nav_eyes:         'Open Eyes In The Game',
-    nav_neyti:        'Neyti',
-    nav_unreleased:   'Unreleased',
-    nav_shop:         'Shop',
-    nav_socials:      'Socials',
+    title_home: 'dm. — music portfolio',
+    nav_home: 'Home', nav_dm: 'Damersimba Music', nav_onyx: 'Colonia Onyx',
+    nav_eyes: 'Open Eyes In The Game', nav_neyti: 'Neyti',
+    nav_unreleased: 'Unreleased', nav_shop: 'Shop', nav_socials: 'Socials',
 
-    hero_eyebrow:     'independent music collective',
-    hero_sub:         'Four projects · one stage. Underground sound from Tula region.',
-    home_projects:    'Projects',
-    old_link:         '→ Open old version (for old computers)',
+    hero_eyebrow: 'independent music collective',
+    dm_short: 'Songs, plans, vocals soon.',
+    onyx_short: 'Metalcore from Bogoroditsk.',
+    eyes_short: 'Nerdcore album about games.',
+    neyti_short: 'Clips about streamer DadeGuy.',
 
-    dm_short:         'Songs, plans, vocals soon.',
-    onyx_short:       'Metalcore from Bogoroditsk.',
-    eyes_short:       'Nerdcore album about games.',
-    neyti_short:      'Clips about streamer DadeGuy.',
+    dm_desc: "Just songs about games (soon I'll be doing vocals, I'm still thinking about it)",
+    onyx_desc: 'Musical band from Bogoroditsk, Tula region. Genres: metalcore, alternative rock and rock. The band was influenced by the British group Onyx Colony.',
+    onyx_releases: 'Releases',
+    onyx_release1: 'Album "The Eliner"',
+    onyx_release2: 'Track "Performance"',
+    onyx_release3: 'Demo "a musician nobody needs"',
 
-    dm_desc:          "Just songs about games (soon I'll be doing vocals, I'm still thinking about it)",
-
-    onyx_desc:        'Musical band from Bogoroditsk, Tula region. Genres: metalcore, alternative rock and rock. The band was influenced by the British group Onyx Colony (also known as Land Of Hell or Colony).',
-    onyx_releases:    'Releases',
-    onyx_release1:    'Album "The Eliner"',
-    onyx_release2:    'Track "Performance"',
-    onyx_release3:    'Demo "a musician nobody needs"',
-
-    eyes_desc:        'This is a Nerdcore album about games.',
-    eyes_listen:      '▶ Listen to Album Playlist',
-    track_dev:        '— in development',
-
-    neyti_desc:       'Channel with clips about streamer DadeGuy.',
+    eyes_desc: 'This is a Nerdcore album about games.',
+    eyes_listen: '▶ Listen to Album Playlist',
+    track_dev: '— in development',
+    neyti_desc: 'Channel with clips about streamer DadeGuy.',
 
     unreleased_title: 'Unreleased',
     unreleased_album: 'Album: CesoR',
-    unreleased_song:  'Song: CesoR',
+    unreleased_song: 'Song: CesoR',
 
-    shop_lead:        'Choose a category — everything will appear here soon.',
-    shop_merch:       'Merch',
-    shop_merch_sub:   'Clothes & accessories',
-    shop_cds:         'CD & Cassettes',
-    shop_cds_sub:     'Physical releases',
-    shop_soon:        'Coming soon',
-    shop_soon_sub:    'Everything will be here soon',
+    shop_lead: 'Choose a category — everything will appear here soon.',
+    shop_merch: 'Merch', shop_merch_sub: 'Clothes & accessories',
+    shop_cds: 'CD & Cassettes', shop_cds_sub: 'Physical releases',
+    shop_soon: 'Coming soon', shop_soon_sub: 'Everything will be here soon',
 
-    socials_desc:     'All links in one place — open whatever you like.'
+    socials_desc: 'All links in one place — open whatever you like.'
   },
-
   ru: {
-    title_home:       'dm. — музыкальное портфолио',
-    nav_home:         'Главная',
-    nav_dm:           'Damersimba Music',
-    nav_onyx:         'Colonia Onyx',
-    nav_eyes:         'Open Eyes In The Game',
-    nav_neyti:        'Neyti',
-    nav_unreleased:   'Невыпущенные',
-    nav_shop:         'Магазин',
-    nav_socials:      'Соцсети',
+    title_home: 'dm. — музыкальное портфолио',
+    nav_home: 'Главная', nav_dm: 'Damersimba Music', nav_onyx: 'Colonia Onyx',
+    nav_eyes: 'Open Eyes In The Game', nav_neyti: 'Neyti',
+    nav_unreleased: 'Невыпущенные', nav_shop: 'Магазин', nav_socials: 'Соцсети',
 
-    hero_eyebrow:     'независимый музыкальный коллектив',
-    hero_sub:         'Четыре проекта · одна сцена. Андерграунд из Тульской области.',
-    home_projects:    'Проекты',
-    old_link:         '→ Открыть старую версию (для старых компьютеров)',
+    hero_eyebrow: 'независимый музыкальный коллектив',
+    dm_short: 'Песни, планы, вокалы скоро.',
+    onyx_short: 'Металкор из Богородицка.',
+    eyes_short: 'Нердкор-альбом про игры.',
+    neyti_short: 'Нарезки по стримеру DadeGuy.',
 
-    dm_short:         'Песни, планы, вокалы скоро.',
-    onyx_short:       'Металкор из Богородицка.',
-    eyes_short:       'Нердкор-альбом про игры.',
-    neyti_short:      'Нарезки по стримеру DadeGuy.',
+    dm_desc: 'Просто песни по играм (скоро буду делать вокалы, я просто ещё думаю об этом)',
+    onyx_desc: 'Музыкальная группа из Богородицка, Тульская область. Жанры: металкор, альтернативный рок и рок. На создание коллектива повлияла британская группа Onyx Colony.',
+    onyx_releases: 'Релизы',
+    onyx_release1: 'Альбом «The Eliner»',
+    onyx_release2: 'Трек «Performance»',
+    onyx_release3: 'Демо-запись «a musician nobody needs»',
 
-    dm_desc:          'Просто песни по играм (скоро буду делать вокалы, я просто ещё думаю об этом)',
-
-    onyx_desc:        'Музыкальная группа из Богородицка, Тульская область. Жанры: металкор, альтернативный рок и рок. На создание коллектива повлияла британская группа Onyx Colony (также известная как Land Of Hell или Colony).',
-    onyx_releases:    'Релизы',
-    onyx_release1:    'Альбом «The Eliner»',
-    onyx_release2:    'Трек «Performance»',
-    onyx_release3:    'Демо-запись «a musician nobody needs»',
-
-    eyes_desc:        'Это Нердкор альбом по играм.',
-    eyes_listen:      '▶ Слушать Плейлист Альбома',
-    track_dev:        '— в разработке',
-
-    neyti_desc:       'Канал с нарезками по стримеру DadeGuy.',
+    eyes_desc: 'Это Нердкор альбом по играм.',
+    eyes_listen: '▶ Слушать Плейлист Альбома',
+    track_dev: '— в разработке',
+    neyti_desc: 'Канал с нарезками по стримеру DadeGuy.',
 
     unreleased_title: 'Невыпущенные',
     unreleased_album: 'Альбом: CesoR',
-    unreleased_song:  'Песня: CesoR',
+    unreleased_song: 'Песня: CesoR',
 
-    shop_lead:        'Выбери категорию — скоро всё здесь появится.',
-    shop_merch:       'Мерч',
-    shop_merch_sub:   'Одежда и аксессуары',
-    shop_cds:         'CD и Аудиокассеты',
-    shop_cds_sub:     'Физические релизы',
-    shop_soon:        'Скоро всё будет',
-    shop_soon_sub:    'Совсем скоро здесь появятся товары',
+    shop_lead: 'Выбери категорию — скоро всё здесь появится.',
+    shop_merch: 'Мерч', shop_merch_sub: 'Одежда и аксессуары',
+    shop_cds: 'CD и Аудиокассеты', shop_cds_sub: 'Физические релизы',
+    shop_soon: 'Скоро всё будет', shop_soon_sub: 'Совсем скоро здесь появятся товары',
 
-    socials_desc:     'Все ссылки в одном месте — открой, что ближе.'
+    socials_desc: 'Все ссылки в одном месте — открой, что ближе.'
   }
 };
 
 const DEFAULT_LANG = 'en';
 const STORAGE_KEY = 'dm-lang';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 
-  const burgerBtn = document.getElementById('burgerBtn');
-  const menu      = document.getElementById('mainMenu');
-  const langBtns  = document.querySelectorAll('.lang-btn');
-  const pageId    = document.body.dataset.page || 'home';
+  var preloader = document.getElementById('preloader');
+  if (preloader) {
+    function hidePreloader() {
+      preloader.classList.add('hidden');
+      setTimeout(function () { if (preloader) preloader.style.display = 'none'; }, 700);
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(hidePreloader, 800);
+    } else {
+      window.addEventListener('load', function () { setTimeout(hidePreloader, 800); });
+      setTimeout(hidePreloader, 3000);
+    }
+  }
+
+  var burgerBtn = document.getElementById('burgerBtn');
+  var menu = document.getElementById('mainMenu');
+  var langBtns = document.querySelectorAll('.lang-btn');
+  var pageId = document.body.getAttribute('data-page') || 'home';
 
   function closeMenu() {
     if (!menu) return;
@@ -125,73 +109,65 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (burgerBtn && menu) {
-    burgerBtn.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('open');
+    burgerBtn.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('open');
       burgerBtn.classList.toggle('open', isOpen);
       burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', function (e) {
       if (!menu.classList.contains('open')) return;
       if (menu.contains(e.target) || burgerBtn.contains(e.target)) return;
       closeMenu();
     });
-
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', function () {
       if (window.innerWidth > 768) closeMenu();
     });
   }
 
   function getSavedLang() {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      var saved = localStorage.getItem(STORAGE_KEY);
       if (saved === 'en' || saved === 'ru') return saved;
     } catch (e) {}
     return DEFAULT_LANG;
   }
 
   function applyLang(lang) {
-    const dict = I18N[lang] || I18N[DEFAULT_LANG];
+    var dict = I18N[lang] || I18N[DEFAULT_LANG];
     document.documentElement.lang = lang;
-
-    if (pageId === 'home' && dict.title_home) {
-      document.title = dict.title_home;
+    if (pageId === 'home' && dict.title_home) document.title = dict.title_home;
+    var nodes = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < nodes.length; i++) {
+      var key = nodes[i].getAttribute('data-i18n');
+      if (dict[key] !== undefined) nodes[i].textContent = dict[key];
     }
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dict[key] !== undefined) el.textContent = dict[key];
-    });
-
-    langBtns.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
+    for (var j = 0; j < langBtns.length; j++) {
+      if (langBtns[j].getAttribute('data-lang') === lang) langBtns[j].classList.add('active');
+      else langBtns[j].classList.remove('active');
+    }
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
   }
 
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-  });
+  for (var i = 0; i < langBtns.length; i++) {
+    (function (btn) {
+      btn.addEventListener('click', function () { applyLang(btn.getAttribute('data-lang')); });
+    })(langBtns[i]);
+  }
 
   applyLang(getSavedLang());
 
-  const shopCats    = document.querySelectorAll('.shop-cat');
-  const shopMessage = document.getElementById('shopMessage');
-
+  var shopCats = document.querySelectorAll('.shop-cat');
+  var shopMessage = document.getElementById('shopMessage');
   if (shopCats.length && shopMessage) {
-    shopCats.forEach(cat => {
-      cat.addEventListener('click', () => {
-        const isActive = cat.classList.contains('active');
-        shopCats.forEach(c => c.classList.remove('active'));
-
-        if (isActive) {
-          shopMessage.classList.remove('visible');
-        } else {
-          cat.classList.add('active');
-          shopMessage.classList.add('visible');
-        }
-      });
-    });
+    for (var k = 0; k < shopCats.length; k++) {
+      (function (cat) {
+        cat.addEventListener('click', function () {
+          var isActive = cat.classList.contains('active');
+          for (var m = 0; m < shopCats.length; m++) shopCats[m].classList.remove('active');
+          if (isActive) shopMessage.classList.remove('visible');
+          else { cat.classList.add('active'); shopMessage.classList.add('visible'); }
+        });
+      })(shopCats[k]);
+    }
   }
 });

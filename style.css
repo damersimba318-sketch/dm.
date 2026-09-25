@@ -334,6 +334,24 @@ h2 {
 .social-text b { color: #fff; font-weight: 600; font-size: 13.5px; }
 .social-text span { font-size: 11.5px; color: #888; }
 
+/* OpenVK — синий фон, белая иконка */
+.social-icon-openvk {
+  background: #2b7ddb;
+  border-color: rgba(43,125,219,.5);
+  padding: 4px;
+  color: #fff;
+}
+.social-icon-openvk svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.social-card-openvk:hover .social-icon-openvk {
+  background: linear-gradient(135deg, #2b7ddb, #1e5cb3);
+  border-color: transparent;
+  box-shadow: 0 0 24px rgba(43,125,219,.75);
+}
+
 /* FOOTER */
 footer {
   position: relative; z-index: 2;

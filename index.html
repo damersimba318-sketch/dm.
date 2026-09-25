@@ -6,26 +6,12 @@
 <title>dm. — music portfolio</title>
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="apple-touch-icon" href="images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>#preloader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity .6s ease,visibility .6s ease}#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}</style>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-home" data-page="home">
-
-<div id="preloader">
-  <div class="preloader-inner">
-    <div class="preloader-logo">dm.</div>
-    <div class="preloader-bar"><span></span></div>
-    <div class="preloader-text">loading</div>
-  </div>
-</div>
-
-<div class="bg-grid"></div>
-<div class="bg-glow"></div>
-<div class="bg-noise"></div>
 
 <header>
   <div class="header-top">
@@ -53,16 +39,52 @@
 <main>
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow" data-i18n="hero_eyebrow">independent music collective</div>
-      <h1 class="hero-title">
-        <span class="line1">Damersimba</span>
-        <span class="line2">music</span>
-      </h1>
+      <div class="hero-logo">◐</div>
+      <h1 class="hero-title">dm.</h1>
+      <p class="hero-sub" data-i18n="hero_eyebrow">independent music collective</p>
+
+      <div class="hero-links">
+        <a href="dm-music/">Damersimba Music</a>
+        <a href="colonia-onyx/">Colonia Onyx</a>
+        <a href="open-eyes/">Open Eyes In The Game</a>
+        <a href="neyti/">Neyti</a>
+      </div>
     </div>
+  </section>
+
+  <section class="about">
+    <h2 data-i18n="home_projects">Projects</h2>
+    <ul class="project-list">
+      <li><a href="dm-music/"><span class="pl-mark">◆</span> <b>Damersimba Music</b> — <span data-i18n="dm_short">Songs, plans, vocals soon.</span></a></li>
+      <li><a href="colonia-onyx/"><span class="pl-mark">◆</span> <b>Colonia Onyx</b> — <span data-i18n="onyx_short">Metalcore from Bogoroditsk.</span></a></li>
+      <li><a href="open-eyes/"><span class="pl-mark">◆</span> <b>Open Eyes In The Game</b> — <span data-i18n="eyes_short">Nerdcore album about games.</span></a></li>
+      <li><a href="neyti/"><span class="pl-mark">◆</span> <b>Neyti</b> — <span data-i18n="neyti_short">Clips about streamer DadeGuy.</span></a></li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <h2 data-i18n="nav_socials">Socials</h2>
+    <ul class="project-list">
+      <li><a href="https://t.me/dmvair_official" target="_blank" rel="noopener"><span class="pl-mark">✦</span> Telegram — Damersimba</a></li>
+      <li><a href="https://www.youtube.com/@DamersimbaMusic" target="_blank" rel="noopener"><span class="pl-mark">✦</span> YouTube — Damersimba</a></li>
+      <li><a href="https://vk.ru/coloni_metalcore" target="_blank" rel="noopener"><span class="pl-mark">✦</span> VK — Colonia Onyx</a></li>
+      <li><a href="https://t.me/colonia_metalcore" target="_blank" rel="noopener"><span class="pl-mark">✦</span> Telegram — Colonia Onyx</a></li>
+      <li><a href="https://4beat.ru/colonia_metalcore" target="_blank" rel="noopener"><span class="pl-mark">✦</span> 4beat — Colonia Onyx</a></li>
+      <li><a href="https://www.youtube.com/@DadeGaySosiPenis" target="_blank" rel="noopener"><span class="pl-mark">✦</span> YouTube — Neyti</a></li>
+      <li><a href="https://openvk.org/id45128" target="_blank" rel="noopener"><span class="pl-mark">✦</span> OpenVK</a></li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <p class="old-link">
+      <a href="old/" data-i18n="old_link">→ Open old version (for old computers)</a>
+    </p>
   </section>
 </main>
 
-<footer><span>dm. © 2026</span></footer>
+<footer>
+  <span>dm. © 2026</span>
+</footer>
 
 <script src="script.js"></script>
 </body>

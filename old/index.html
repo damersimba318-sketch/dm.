@@ -19,7 +19,6 @@
   a:hover { color: #cc0000; text-decoration: underline; }
   a:visited { color: #663399; }
 
-  /* КОНТЕЙНЕР */
   .page {
     width: 780px;
     margin: 8px auto;
@@ -27,7 +26,6 @@
     border: 1px solid #808080;
   }
 
-  /* ЛОГО */
   .masthead {
     background: #c00000;
     padding: 8px 10px 10px;
@@ -43,10 +41,7 @@
     text-decoration: none;
     line-height: 34px;
   }
-  .masthead .logo em {
-    color: #ffff00;
-    font-style: normal;
-  }
+  .masthead .logo em { color: #ffff00; font-style: normal; }
   .masthead .logo:hover { color: #ffffff; text-decoration: none; }
   .masthead .tagline {
     position: absolute;
@@ -58,7 +53,6 @@
     text-transform: uppercase;
   }
 
-  /* НАВИГАЦИЯ */
   .nav {
     background: #000080;
     background-image: linear-gradient(180deg, #4a4aa8 0%, #000080 100%);
@@ -89,17 +83,14 @@
     color: #000080;
   }
 
-  /* ОСНОВНАЯ ОБЛАСТЬ */
   .main-area {
     padding: 12px 14px;
     background: #ffffff;
   }
 
-  /* ПАНЕЛИ */
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
-  /* ЗАГОЛОВКИ */
   .head-line {
     background: #cccccc;
     background-image: linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 100%);
@@ -112,7 +103,6 @@
     letter-spacing: 0.5px;
   }
 
-  /* ТЕКСТ */
   p {
     margin: 0 0 8px;
     font-size: 11px;
@@ -121,7 +111,6 @@
   b { color: #000; }
   .desc { color: #333; }
 
-  /* СПИСКИ */
   ul.bullets, ol.bullets {
     padding-left: 18px;
     margin: 0 0 8px;
@@ -138,7 +127,6 @@
   }
   ul.bullets li b { color: #000080; }
 
-  /* ССЫЛКИ-СТРОКИ */
   .link-row {
     padding: 3px 0;
     border-bottom: 1px dotted #c0c0c0;
@@ -161,7 +149,6 @@
   .link-row .tag.green { background: #008000; }
   .link-row .tag.orange { background: #cc6600; }
 
-  /* ЗАГОЛОВОК СТРАНИЦЫ */
   .page-title {
     background: #000080;
     color: #ffffff;
@@ -180,7 +167,6 @@
     letter-spacing: 0.5px;
   }
 
-  /* КНОПКА НАЗАД */
   .back-btn {
     display: inline-block;
     padding: 4px 12px;
@@ -197,7 +183,6 @@
   .back-btn:hover { text-decoration: none; color: #cc0000; }
   .back-btn:active { border-style: inset; }
 
-  /* ФУТЕР */
   .footer {
     border-top: 1px solid #808080;
     background: #f0f0f0;
@@ -207,12 +192,7 @@
     color: #666;
     line-height: 1.6;
   }
-  .footer .top-link {
-    color: #0033cc;
-    font-size: 10px;
-  }
 
-  /* МИГАНИЕ */
   .blink {
     color: #cc0000;
     font-weight: bold;
@@ -220,7 +200,6 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* МОБИЛЬНАЯ */
   @media (max-width: 800px) {
     .page { width: 100%; margin: 0; border: none; }
     .nav-btn { padding: 4px 8px; font-size: 10px; }
@@ -232,13 +211,11 @@
 
 <div class="page">
 
-  <!-- ЛОГО -->
   <div class="masthead">
     <a class="logo" href="../">dm<em>.</em></a>
     <div class="tagline">Официальный сайт · old edition</div>
   </div>
 
-  <!-- НАВИГАЦИЯ -->
   <div class="nav">
     <button class="nav-btn active" data-tab="home">Главная</button>
     <button class="nav-btn" data-tab="about">О нас</button>
@@ -250,10 +227,8 @@
     <button class="nav-btn" data-tab="shop">Магазин</button>
   </div>
 
-  <!-- ОСНОВНАЯ ОБЛАСТЬ -->
   <div class="main-area">
 
-    <!-- ГЛАВНАЯ -->
     <div class="tab-panel active" data-panel="home">
       <div class="page-title">
         Добро пожаловать!
@@ -278,7 +253,6 @@
       </ul>
     </div>
 
-    <!-- О НАС -->
     <div class="tab-panel" data-panel="about">
       <div class="page-title">
         О нас
@@ -305,7 +279,6 @@
       </p>
     </div>
 
-    <!-- ПРОЕКТЫ -->
     <div class="tab-panel" data-panel="projects">
       <div class="page-title">
         Наши проекты
@@ -327,7 +300,6 @@
       <div class="link-row"><span class="tag orange">NEYTI</span> <a href="../neyti/">Neyti →</a></div>
     </div>
 
-    <!-- COLONIA ONYX -->
     <div class="tab-panel" data-panel="onyx">
       <div class="page-title">
         Colonia Onyx
@@ -347,7 +319,6 @@
       <div class="link-row"><span class="tag red">4b</span> <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></div>
     </div>
 
-    <!-- OPEN EYES -->
     <div class="tab-panel" data-panel="eyes">
       <div class="page-title">
         Open Eyes In The Game
@@ -374,7 +345,6 @@
       </ol>
     </div>
 
-    <!-- NEYTI -->
     <div class="tab-panel" data-panel="neyti">
       <div class="page-title">
         Neyti
@@ -390,7 +360,6 @@
       <div class="link-row"><span class="tag orange">YT</span> <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></div>
     </div>
 
-    <!-- ССЫЛКИ -->
     <div class="tab-panel" data-panel="links">
       <div class="page-title">
         Наши ссылки
@@ -414,7 +383,6 @@
       <div class="link-row"><span class="tag green">OK</span> <a href="https://openvk.org/dmvair_official">openvk.org/dmvair_official</a></div>
     </div>
 
-    <!-- МАГАЗИН -->
     <div class="tab-panel" data-panel="shop">
       <div class="page-title">
         Магазин
@@ -430,14 +398,11 @@
       </p>
     </div>
 
-    <!-- КНОПКА НАЗАД -->
     <a class="back-btn" href="../">← Вернуться на современную версию</a>
 
   </div>
 
-  <!-- ФУТЕР -->
   <div class="footer">
-    <a class="top-link" href="#">↑ наверх</a> ·
     dm. © 2026 ·
     <span style="color:#888;">[ Это старая версия сайта для старых компьютеров ]</span>
   </div>

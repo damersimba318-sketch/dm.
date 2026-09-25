@@ -1,6 +1,6 @@
 /* ============================================================
    dm. — script.js
-   Языки (EN/RU) + бургер + прелоадер + категории магазина
+   Языки (EN/RU) + бургер + категории магазина
    ============================================================ */
 
 const I18N = {
@@ -17,8 +17,8 @@ const I18N = {
 
     hero_eyebrow:     'independent music collective',
     hero_sub:         'Four projects · one stage. Underground sound from Tula region.',
-    scroll:           'scroll',
     home_projects:    'Projects',
+    old_link:         '→ Open old version (for old computers)',
 
     dm_short:         'Songs, plans, vocals soon.',
     onyx_short:       'Metalcore from Bogoroditsk.',
@@ -67,8 +67,8 @@ const I18N = {
 
     hero_eyebrow:     'независимый музыкальный коллектив',
     hero_sub:         'Четыре проекта · одна сцена. Андерграунд из Тульской области.',
-    scroll:           'вниз',
     home_projects:    'Проекты',
+    old_link:         '→ Открыть старую версию (для старых компьютеров)',
 
     dm_short:         'Песни, планы, вокалы скоро.',
     onyx_short:       'Металкор из Богородицка.',
@@ -109,20 +109,6 @@ const DEFAULT_LANG = 'en';
 const STORAGE_KEY = 'dm-lang';
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    const hide = () => {
-      preloader.classList.add('hidden');
-      setTimeout(() => { preloader.style.display = 'none'; }, 700);
-    };
-    if (document.readyState === 'complete') {
-      setTimeout(hide, 900);
-    } else {
-      window.addEventListener('load', () => setTimeout(hide, 900));
-      setTimeout(hide, 3500);
-    }
-  }
 
   const burgerBtn = document.getElementById('burgerBtn');
   const menu      = document.getElementById('mainMenu');

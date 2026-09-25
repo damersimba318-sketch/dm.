@@ -3,69 +3,393 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dm. — old version</title>
+<title>dm. — Старая версия</title>
 <style>
-  body{background:#000;color:#d0d0d0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7;max-width:720px;margin:0 auto;padding:24px 20px 40px}
-  h1{font-size:32px;color:#fff;border-bottom:1px solid #333;padding-bottom:14px;margin-bottom:20px;letter-spacing:2px}
-  h2{font-size:18px;color:#fff;margin:30px 0 12px;letter-spacing:1px}
-  a{color:#6cf}a:hover{color:#fff}a:visited{color:#c9f}
-  ul,ol{padding-left:22px;margin:0 0 16px}li{margin-bottom:6px}
-  hr{border:none;border-top:1px solid #222;margin:24px 0}
-  .sub{color:#888;font-size:14px}.footer{color:#555;font-size:13px;text-align:center;margin-top:50px}
-  .badge{color:#d946ef;font-weight:bold}
+  body {
+    background: #000000;
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0 23px, #0d0d0d 23px 24px),
+      repeating-linear-gradient(90deg, transparent 0 23px, #0d0d0d 23px 24px);
+    color: #c0c0c0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: left;
+  }
+
+  /* Шапка сайта — как было в 90-е */
+  .header {
+    background: #000080;
+    border: 3px ridge #c0c0c0;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .header h1 {
+    color: #ffff00;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 0 #000;
+  }
+
+  .header .sub {
+    color: #00ffff;
+    font-size: 14px;
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* Бегущая строка */
+  marquee {
+    background: #000000;
+    color: #00ff00;
+    border: 2px inset #c0c0c0;
+    padding: 6px 0;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  /* Плашка "best viewed in" */
+  .badges {
+    text-align: center;
+    margin: 14px 0;
+    padding: 10px;
+  }
+
+  .badges span {
+    display: inline-block;
+    background: #c0c0c0;
+    color: #000;
+    border: 2px outset #ffffff;
+    padding: 3px 8px;
+    margin: 2px;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  /* Основные блоки */
+  .box {
+    background: #1a1a1a;
+    border: 3px groove #808080;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+
+  .box h2 {
+    color: #ffff00;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px dashed #808080;
+    letter-spacing: 1px;
+  }
+
+  .box p {
+    margin: 0 0 10px;
+    color: #c0c0c0;
+  }
+
+  a {
+    color: #00aaff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  a:visited {
+    color: #cc66ff;
+  }
+
+  a:hover {
+    color: #ffff00;
+    background: #000080;
+  }
+
+  ul {
+    list-style: square;
+    padding-left: 26px;
+    margin: 0 0 12px;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+    color: #c0c0c0;
+  }
+
+  ol {
+    padding-left: 26px;
+    margin: 0 0 12px;
+  }
+
+  ol li {
+    margin-bottom: 5px;
+    color: #c0c0c0;
+  }
+
+  /* Счётчик посещений */
+  .counter {
+    text-align: center;
+    margin: 16px 0;
+    padding: 10px;
+    background: #000;
+    border: 2px inset #c0c0c0;
+  }
+
+  .counter .label {
+    color: #808080;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .counter .num {
+    display: inline-block;
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border: 1px solid #00ff00;
+    letter-spacing: 3px;
+    margin-top: 6px;
+  }
+
+  /* Гостевая книга */
+  .guestbook {
+    background: #2a1a00;
+    border: 3px ridge #ffcc00;
+    padding: 12px 16px;
+    margin: 14px 0;
+    color: #ffcc00;
+    font-size: 14px;
+  }
+
+  .guestbook b {
+    color: #ffffff;
+  }
+
+  /* Кнопка назад */
+  .back {
+    text-align: center;
+    margin: 20px 0 10px;
+  }
+
+  .back a {
+    display: inline-block;
+    background: #c0c0c0;
+    color: #000000;
+    padding: 8px 20px;
+    border: 3px outset #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .back a:hover {
+    background: #ffffff;
+    color: #000080;
+    border-style: inset;
+  }
+
+  /* Футер */
+  .footer {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+  }
+
+  .footer .best {
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    margin-bottom: 8px;
+    animation: blink 1.2s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Мигание (эмуляция <blink>) */
+  .blink {
+    animation: blink 1s step-end infinite;
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  .new {
+    background: #ff0000;
+    color: #ffff00;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    padding: 2px 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: blink 0.8s step-end infinite;
+  }
 </style>
 </head>
 <body>
-<h1>dm.</h1>
-<p class="sub">Независимый музыкальный коллектив · старая версия</p>
-<p><a href="../">→ Современная версия</a></p>
-<hr>
-<h2>Проекты</h2>
-<ul>
-  <li><span class="badge">◆</span> <b>Damersimba Music</b> — просто песни по играм.</li>
-  <li><span class="badge">◆</span> <b>Colonia Onyx</b> — металкор из Богородицка.</li>
-  <li><span class="badge">◆</span> <b>Open Eyes In The Game</b> — Нердкор альбом по играм.</li>
-  <li><span class="badge">◆</span> <b>Neyti</b> — нарезки по стримеру DadeGuy.</li>
-</ul>
-<hr>
-<h2>Соцсети</h2>
-<ul>
-  <li><a href="https://t.me/dmvair_official">Telegram — Damersimba</a></li>
-  <li><a href="https://www.youtube.com/@DamersimbaMusic">YouTube — Damersimba Music</a></li>
-  <li><a href="https://vk.ru/coloni_metalcore">VK — Colonia Onyx</a></li>
-  <li><a href="https://t.me/colonia_metalcore">Telegram — Colonia Onyx</a></li>
-  <li><a href="https://4beat.ru/colonia_metalcore">4beat — Colonia Onyx</a></li>
-  <li><a href="https://www.youtube.com/@DadeGaySosiPenis">YouTube — Neyti</a></li>
-  <li><a href="https://openvk.org/id45128">OpenVK — DamerSimba</a></li>
-</ul>
-<hr>
-<h2>Релизы Colonia Onyx</h2>
-<ul>
-  <li>Альбом «The Eliner»</li>
-  <li>Трек «Performance»</li>
-  <li>Демо «a musician nobody needs»</li>
-</ul>
-<hr>
-<h2>Open Eyes — треклист</h2>
-<ol>
-  <li><a href="https://band.link/roblox_govno">Roblox</a></li>
-  <li><a href="https://youtu.be/JE9sBaNx2Z8">Metal Gear Solid</a></li>
-  <li>Zenless Zone Zero — в разработке</li>
-  <li>Arknights — в разработке</li>
-  <li>Genshin Impact — в разработке</li>
-  <li>Honkai: Star Rail — в разработке</li>
-  <li>Honkai Impact 3rd — в разработке</li>
-  <li>Nodus Fall — в разработке</li>
-  <li>Dark Souls — в разработке</li>
-  <li>Layers Of Fear — в разработке</li>
-  <li>Sword Art Online: Hollow Realization — в разработке</li>
-  <li>Sword Art Online: Echoes of Aincrad — в разработке</li>
-  <li>GTA 6 — в разработке</li>
-  <li><a href="https://www.youtube.com/watch?v=ry2Tv1YpGMM">Cat Bait</a></li>
-  <li><a href="https://band.link/DjW00">NiGHTS into dreams</a></li>
-</ol>
-<hr>
-<p>Магазин временно закрыт.</p>
-<div class="footer">dm. © 2026</div>
+
+<div class="container">
+
+  <!-- Шапка -->
+  <div class="header">
+    <h1>D M .</h1>
+    <div class="sub">~~ Независимый музыкальный коллектив ~~</div>
+  </div>
+
+  <!-- Бегущая строка -->
+  <marquee behavior="scroll" direction="left" scrollamount="4">
+    *** Добро пожаловать на наш сайт! *** Обновлено 25 сентября 2026 *** Заходите чаще! ***
+  </marquee>
+
+  <!-- Плашки best viewed in -->
+  <div class="badges">
+    <span>Best viewed in IE 4.0</span>
+    <span>800 × 600</span>
+    <span>Netscape 3.0</span>
+    <span>JavaScript ON</span>
+  </div>
+
+  <!-- О проекте -->
+  <div class="box">
+    <h2>◆ О НАС</h2>
+    <p>
+      Мы — независимый коллектив из Тульской области. У нас четыре проекта:
+      Damersimba Music, Colonia Onyx, Open Eyes In The Game и Neyti.
+      Пишем песни, выступаем, делаем то, что любим.
+    </p>
+    <p>
+      <span class="new">NEW!</span>
+      <a href="../">Перейти на современную версию сайта →</a>
+    </p>
+  </div>
+
+  <!-- Проекты -->
+  <div class="box">
+    <h2>◆ НАШИ ПРОЕКТЫ</h2>
+    <ul>
+      <li><b>Damersimba Music</b> — просто песни по играм. Скоро будут вокалы.</li>
+      <li><b>Colonia Onyx</b> — металкор из Богородицка, Тульская область.</li>
+      <li><b>Open Eyes In The Game</b> — Нердкор-альбом по играм.</li>
+      <li><b>Neyti</b> — нарезки по стримеру DadeGuy.</li>
+    </ul>
+  </div>
+
+  <!-- Релизы Colonia Onyx -->
+  <div class="box">
+    <h2>◆ РЕЛИЗЫ COLONIA ONYX</h2>
+    <ul>
+      <li>Альбом «The Eliner»</li>
+      <li>Трек «Performance»</li>
+      <li>Демо-запись «a musician nobody needs»</li>
+    </ul>
+  </div>
+
+  <!-- Треклист Open Eyes -->
+  <div class="box">
+    <h2>◆ OPEN EYES IN THE GAME — ТРЕКЛИСТ</h2>
+    <ol>
+      <li><a href="https://band.link/roblox_govno">Roblox</a></li>
+      <li><a href="https://youtu.be/JE9sBaNx2Z8">Metal Gear Solid</a></li>
+      <li>Zenless Zone Zero <i>(в разработке)</i></li>
+      <li>Arknights <i>(в разработке)</i></li>
+      <li>Genshin Impact <i>(в разработке)</i></li>
+      <li>Honkai: Star Rail <i>(в разработке)</i></li>
+      <li>Honkai Impact 3rd <i>(в разработке)</i></li>
+      <li>Nodus Fall <i>(в разработке)</i></li>
+      <li>Dark Souls <i>(в разработке)</i></li>
+      <li>Layers Of Fear <i>(в разработке)</i></li>
+      <li>Sword Art Online: Hollow Realization <i>(в разработке)</i></li>
+      <li>Sword Art Online: Echoes of Aincrad <i>(в разработке)</i></li>
+      <li>GTA 6 <i>(в разработке)</i></li>
+      <li><a href="https://www.youtube.com/watch?v=ry2Tv1YpGMM">Cat Bait</a></li>
+      <li><a href="https://band.link/DjW00">NiGHTS into dreams</a></li>
+    </ol>
+  </div>
+
+  <!-- Соцсети -->
+  <div class="box">
+    <h2>◆ НАШИ ССЫЛКИ</h2>
+    <ul>
+      <li>Telegram — Damersimba: <a href="https://t.me/dmvair_official">t.me/dmvair_official</a></li>
+      <li>YouTube — Damersimba: <a href="https://www.youtube.com/@DamersimbaMusic">@DamersimbaMusic</a></li>
+      <li>VK — Colonia Onyx: <a href="https://vk.ru/coloni_metalcore">vk.ru/coloni_metalcore</a></li>
+      <li>Telegram — Colonia Onyx: <a href="https://t.me/colonia_metalcore">t.me/colonia_metalcore</a></li>
+      <li>4beat — Colonia Onyx: <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></li>
+      <li>YouTube — Neyti: <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></li>
+      <li>OpenVK — DamerSimba: <a href="https://openvk.org/id45128">openvk.org/id45128</a></li>
+      <li>OpenVK Group: <a href="https://openvk.org/dmvair_official">openvk.org/dmvair_official</a></li>
+    </ul>
+  </div>
+
+  <!-- Магазин -->
+  <div class="box">
+    <h2>◆ МАГАЗИН</h2>
+    <p>
+      Магазин временно закрыт. <span class="blink">Скоро всё будет!</span>
+    </p>
+    <p>
+      Мерч, CD и аудиокассеты появятся здесь в ближайшее время.
+    </p>
+  </div>
+
+  <!-- Счётчик -->
+  <div class="counter">
+    <div class="label">Вы посетитель номер</div>
+    <div class="num">0 0 4 8 1 3</div>
+  </div>
+
+  <!-- Гостевая книга -->
+  <div class="guestbook">
+    ✎ <b>ГОСТЕВАЯ КНИГА</b><br>
+    Оставьте своё сообщение! Пишите отзывы, предложения и просто тёплые слова.<br>
+    <a href="mailto:dmvair@example.com" style="color:#ffff00;">→ Оставить запись</a>
+  </div>
+
+  <!-- Кнопка назад -->
+  <div class="back">
+    <a href="../">◄ Вернуться на главную</a>
+  </div>
+
+  <!-- Футер -->
+  <div class="footer">
+    <div class="best">★ Лучше всего смотрится при разрешении 800×600 ★</div>
+    <div>
+      dm. © 2026 · Сайт сделан вручную на чистом HTML<br>
+      Дата последнего обновления: 25.09.2026<br>
+      <span style="color:#808080;">[ Это старая версия сайта для старых компьютеров ]</span>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>

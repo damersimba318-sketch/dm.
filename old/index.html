@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>dm. — Старая версия</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000099'/%3E%3Crect x='1' y='1' width='62' height='62' fill='none' stroke='%23a0a0a0' stroke-width='2'/%3E%3Ctext x='32' y='34' font-family='Times New Roman,serif' font-size='34' font-weight='bold' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle' stroke='%23c0c0c0' stroke-width='1.5'%3EDM%3C/text%3E%3C/svg%3E">
 <style>
   body {
     background: #000000;
@@ -26,7 +27,7 @@
     text-align: left;
   }
 
-  /* Шапка сайта — как было в 90-е */
+  /* Шапка */
   .header {
     background: #000080;
     border: 3px ridge #c0c0c0;
@@ -36,35 +37,26 @@
   }
 
   .header h1 {
-    color: #ffff00;
+    color: #ffffff;
     font-family: "Times New Roman", Times, serif;
-    font-size: 42px;
+    font-size: 52px;
     font-weight: bold;
     margin: 0;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 6px;
+    text-shadow:
+      2px 2px 0 #000,
+      4px 4px 0 rgba(192,192,192,.4);
+    -webkit-text-stroke: 1px #c0c0c0;
   }
 
   .header .sub {
     color: #00ffff;
     font-size: 14px;
-    margin-top: 6px;
+    margin-top: 8px;
     font-style: italic;
   }
 
-  /* Бегущая строка */
-  marquee {
-    background: #000000;
-    color: #00ff00;
-    border: 2px inset #c0c0c0;
-    padding: 6px 0;
-    font-family: "Courier New", monospace;
-    font-size: 14px;
-    margin-bottom: 14px;
-    display: block;
-  }
-
-  /* Плашка "best viewed in" */
+  /* Плашки */
   .badges {
     text-align: center;
     margin: 14px 0;
@@ -84,7 +76,7 @@
     letter-spacing: 0.5px;
   }
 
-  /* Основные блоки */
+  /* Блоки */
   .box {
     background: #1a1a1a;
     border: 3px groove #808080;
@@ -113,9 +105,7 @@
     font-weight: bold;
   }
 
-  a:visited {
-    color: #cc66ff;
-  }
+  a:visited { color: #cc66ff; }
 
   a:hover {
     color: #ffff00;
@@ -143,54 +133,10 @@
     color: #c0c0c0;
   }
 
-  /* Счётчик посещений */
-  .counter {
-    text-align: center;
-    margin: 16px 0;
-    padding: 10px;
-    background: #000;
-    border: 2px inset #c0c0c0;
-  }
-
-  .counter .label {
-    color: #808080;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .counter .num {
-    display: inline-block;
-    background: #000;
-    color: #00ff00;
-    font-family: "Courier New", monospace;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 4px 10px;
-    border: 1px solid #00ff00;
-    letter-spacing: 3px;
-    margin-top: 6px;
-  }
-
-  /* Гостевая книга */
-  .guestbook {
-    background: #2a1a00;
-    border: 3px ridge #ffcc00;
-    padding: 12px 16px;
-    margin: 14px 0;
-    color: #ffcc00;
-    font-size: 14px;
-  }
-
-  .guestbook b {
-    color: #ffffff;
-  }
-
   /* Кнопка назад */
   .back {
     text-align: center;
-    margin: 20px 0 10px;
+    margin: 30px 0 20px;
   }
 
   .back a {
@@ -224,19 +170,11 @@
     border-top: 1px solid #333;
   }
 
-  .footer .best {
-    color: #00ff00;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    margin-bottom: 8px;
-    animation: blink 1.2s step-end infinite;
-  }
-
+  /* Мигание */
   @keyframes blink {
     50% { opacity: 0; }
   }
 
-  /* Мигание (эмуляция <blink>) */
   .blink {
     animation: blink 1s step-end infinite;
     color: #ff0000;
@@ -261,16 +199,11 @@
 
   <!-- Шапка -->
   <div class="header">
-    <h1>D M .</h1>
+    <h1>DM</h1>
     <div class="sub">~~ Независимый музыкальный коллектив ~~</div>
   </div>
 
-  <!-- Бегущая строка -->
-  <marquee behavior="scroll" direction="left" scrollamount="4">
-    *** Добро пожаловать на наш сайт! *** Обновлено 25 сентября 2026 *** Заходите чаще! ***
-  </marquee>
-
-  <!-- Плашки best viewed in -->
+  <!-- Плашки -->
   <div class="badges">
     <span>Best viewed in IE 4.0</span>
     <span>800 × 600</span>
@@ -278,7 +211,7 @@
     <span>JavaScript ON</span>
   </div>
 
-  <!-- О проекте -->
+  <!-- О нас -->
   <div class="box">
     <h2>◆ О НАС</h2>
     <p>
@@ -361,19 +294,6 @@
     </p>
   </div>
 
-  <!-- Счётчик -->
-  <div class="counter">
-    <div class="label">Вы посетитель номер</div>
-    <div class="num">0 0 4 8 1 3</div>
-  </div>
-
-  <!-- Гостевая книга -->
-  <div class="guestbook">
-    ✎ <b>ГОСТЕВАЯ КНИГА</b><br>
-    Оставьте своё сообщение! Пишите отзывы, предложения и просто тёплые слова.<br>
-    <a href="mailto:dmvair@example.com" style="color:#ffff00;">→ Оставить запись</a>
-  </div>
-
   <!-- Кнопка назад -->
   <div class="back">
     <a href="../">◄ Вернуться на главную</a>
@@ -381,12 +301,8 @@
 
   <!-- Футер -->
   <div class="footer">
-    <div class="best">★ Лучше всего смотрится при разрешении 800×600 ★</div>
-    <div>
-      dm. © 2026 · Сайт сделан вручную на чистом HTML<br>
-      Дата последнего обновления: 25.09.2026<br>
-      <span style="color:#808080;">[ Это старая версия сайта для старых компьютеров ]</span>
-    </div>
+    dm. © 2026 · Сайт сделан вручную на чистом HTML<br>
+    <span style="color:#808080;">[ Это старая версия сайта для старых компьютеров ]</span>
   </div>
 
 </div>

@@ -344,6 +344,37 @@ footer {
   margin-top: auto;
 }
 
+/* ============ КНОПКА СТАРОЙ ВЕРСИИ ============ */
+.old-version-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(0,0,0,.85);
+  border: 1px dashed rgba(217,70,239,.5);
+  border-radius: 100px;
+  color: #d946ef;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.old-version-btn:hover {
+  color: #fff;
+  border-color: #d946ef;
+  border-style: solid;
+  background: rgba(217,70,239,.15);
+  box-shadow: 0 0 30px rgba(217,70,239,.4);
+  transform: translateX(-50%) translateY(-3px);
+}
+
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
@@ -415,6 +446,13 @@ footer {
   .shop-message-inner h3 { font-size: 20px; letter-spacing: 3px; }
 
   footer { padding: 26px 16px; }
+
+  .old-version-btn {
+    bottom: 16px;
+    font-size: 10px;
+    padding: 8px 16px;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 420px) {

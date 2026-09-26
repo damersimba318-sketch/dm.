@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сайт не отвечает</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000000'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,Arial,sans-serif' font-size='32' font-weight='300' fill='%23ffffff' text-anchor='middle'%3E!%3C/text%3E%3C/svg%3E">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #1c1c1c;
+    color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Иконка разорванного соединения */
+  .icon {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2c2c2c, #141414);
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 200;
+    color: #666;
+    position: relative;
+  }
+  .icon::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px dashed #2a2a2a;
+    animation: spin 20s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Заголовок */
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+
+  /* Код ошибки */
+  .code {
+    display: inline-block;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 12px;
+    color: #888;
+    padding: 4px 10px;
+    background: #262626;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+  }
+
+  /* Описание */
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9a9a9a;
+    margin-bottom: 12px;
+  }
+
+  /* Кнопки */
+  .actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #3a3a3a;
+    background: #262626;
+    color: #d8d8d8;
+    transition: all .2s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #303030;
+    color: #fff;
+    border-color: #4a4a4a;
+  }
+  .btn.primary {
+    background: #ffffff;
+    color: #000;
+    border-color: #ffffff;
+  }
+  .btn.primary:hover {
+    background: #e0e0e0;
+    border-color: #e0e0e0;
+  }
+
+  /* Нижняя подпись */
+  .footer {
+    margin-top: 40px;
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="icon">!</div>
+
+  <h1>Сайт не отвечает</h1>
+  <div class="code">ERR_CONNECTION_TIMED_OUT</div>
+
+  <p>
+    Не удаётся установить соединение с сайтом.
+    Возможно, сайт перегружен или временно недоступен.
+  </p>
+  <p>
+    Попробуйте обновить страницу через минуту.
+  </p>
+
+  <div class="actions">
+    <button class="btn primary" onclick="location.reload()">Обновить</button>
+    <a class="btn" href="index.html">На главную</a>
+  </div>
+
+  <div class="footer">dm. © 2026</div>
+
+</div>
+
+</body>
+  </html>

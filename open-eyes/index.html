@@ -1,80 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dm. — Open Eyes In The Game</title>
+<title>dm. — на редизайне</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-<link rel="apple-touch-icon" href="../images/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>#preloader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity .6s ease,visibility .6s ease}#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}</style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 </head>
-<body class="page-eyes" data-page="eyes">
+<body class="page-home">
 
-<div id="preloader"><div class="preloader-inner"><div class="preloader-logo">dm.</div><div class="preloader-bar"><span></span></div><div class="preloader-text">loading</div></div></div>
+<main class="wrap">
+  <h1 class="logo">dm.</h1>
 
-<div class="bg-grid"></div><div class="bg-glow"></div><div class="bg-noise"></div>
+  <div class="box">
+    <div class="box-tag">статус</div>
+    <h2>Сайт на редизайне</h2>
+    <p>
+      Мы обновляем сайт — скоро здесь появится новая версия.
+      Пока что пользуйтесь <b>старой версией</b>, она полностью работает.
+    </p>
 
-<header>
-  <div class="header-top">
-    <a class="logo" href="../">dm.</a>
-    <div class="header-actions">
-      <div class="lang-switch">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
-      </div>
-      <button class="burger" id="burgerBtn" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="actions">
+      <a class="btn" href="../old/">→ Перейти в Old version</a>
     </div>
   </div>
-  <nav class="menu" id="mainMenu">
-    <a class="nav-link" href="../" data-i18n="nav_home">Home</a>
-    <a class="nav-link dm" href="../dm-music/" data-i18n="nav_dm">Damersimba Music</a>
-    <a class="nav-link onyx" href="../colonia-onyx/" data-i18n="nav_onyx">Colonia Onyx</a>
-    <a class="nav-link active" href="../open-eyes/" data-i18n="nav_eyes">Open Eyes In The Game</a>
-    <a class="nav-link neyti" href="../neyti/" data-i18n="nav_neyti">Neyti</a>
-    <a class="nav-link" href="../unreleased/" data-i18n="nav_unreleased">Unreleased</a>
-    <a class="nav-link" href="../shop/" data-i18n="nav_shop">Shop</a>
-    <a class="nav-link" href="../socials/" data-i18n="nav_socials">Socials</a>
-  </nav>
-</header>
 
-<main>
-  <section class="page-content center">
-    <div class="page-head center">
-      <span class="page-num">03</span>
-      <div class="page-crumb"><a href="../">dm.</a> <span>/</span> <span>Open Eyes In The Game</span></div>
-    </div>
-
-    <img src="../images/open_eyes_logo.png" alt="Open Eyes In The Game" class="big-logo">
-    <p class="lead" data-i18n="eyes_desc">This is a Nerdcore album about games.</p>
-
-    <a class="btn big-btn" href="https://www.youtube.com/playlist?list=PLYDGIPEjHH7o&si=3ZkmoUv9ktu-XrK3" target="_blank" rel="noopener" data-i18n="eyes_listen">▶ Listen to Album Playlist</a>
-
-    <ol class="tracklist">
-      <li><a href="https://band.link/roblox_govno" target="_blank" rel="noopener">Roblox</a></li>
-      <li><a href="https://youtu.be/JE9sBaNx2Z8?si=osmrShRpPcXImZDd" target="_blank" rel="noopener">Metal Gear Solid</a></li>
-      <li class="disabled">Zenless Zone Zero <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Arknights <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Genshin Impact <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Honkai: Star Rail <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Honkai Impact 3rd <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Nodus Fall <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Dark Souls <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Layers Of Fear <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Sword Art Online: Hollow Realization <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">Sword Art Online: Echoes of Aincrad <span data-i18n="track_dev">— in development</span></li>
-      <li class="disabled">GTA 6 <span data-i18n="track_dev">— in development</span></li>
-      <li><a href="https://www.youtube.com/watch?si=fL7jhQO1RkreaUUf&v=ry2Tv1YpGMM&feature=youtu.be" target="_blank" rel="noopener">Cat Bait</a></li>
-      <li><a href="https://band.link/DjW00" target="_blank" rel="noopener">NiGHTS into dreams</a></li>
-    </ol>
-  </section>
+  <div class="footer">
+    dm. © 2026
+  </div>
 </main>
 
-<footer><span>dm. © 2026</span></footer>
-<script src="../script.js"></script>
 </body>
 </html>

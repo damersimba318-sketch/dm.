@@ -3,207 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dm. — Официальный сайт</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c00000'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3Edm.%3C/text%3E%3C/svg%3E">
+<title>dm. — домашняя страница</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
-    background: #ffffff;
+    background: #c0c0c0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0 1px, rgba(128,128,128,.15) 1px 2px),
+      repeating-linear-gradient(90deg, transparent 0 1px, rgba(128,128,128,.15) 1px 2px);
     color: #000;
-    font: 11px Verdana, Arial, Tahoma, sans-serif;
-    line-height: 1.4;
+    font: 15px/1.5 "Times New Roman", Times, serif;
+    -webkit-text-size-adjust: 100%;
   }
 
-  a { color: #0033cc; text-decoration: none; }
-  a:hover { color: #cc0000; text-decoration: underline; }
-  a:visited { color: #663399; }
+  a { color: #0000ee; text-decoration: underline; }
+  a:visited { color: #551a8b; }
+  a:active { color: #ee0000; }
 
   .page {
-    width: 780px;
-    margin: 8px auto;
+    max-width: 780px;
+    margin: 0 auto;
     background: #ffffff;
-    border: 1px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #808080;
   }
 
-  .masthead {
-    background: #c00000;
-    padding: 8px 10px 10px;
-    height: 52px;
-    position: relative;
-    overflow: hidden;
-  }
-  .masthead .logo {
-    float: left;
-    font: bold 28px Arial, Helvetica, sans-serif;
+  .header {
+    background: #000080;
     color: #ffffff;
-    letter-spacing: -1px;
-    text-decoration: none;
-    line-height: 34px;
+    padding: 12px 14px;
+    text-align: center;
+    border-bottom: 3px ridge #c0c0c0;
   }
-  .masthead .logo em { color: #ffff00; font-style: normal; }
-  .masthead .logo:hover { color: #ffffff; text-decoration: none; }
-  .masthead .tagline {
-    position: absolute;
-    left: 10px;
-    bottom: 4px;
-    color: #ffcccc;
-    font-size: 9px;
+  .header h1 {
+    font: bold 32px "Times New Roman", Times, serif;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 #000040;
+    margin-bottom: 4px;
+  }
+  .header .sub {
+    font-size: 12px;
+    color: #ffcc00;
+    font-style: italic;
     letter-spacing: 1px;
-    text-transform: uppercase;
   }
 
   .nav {
-    background: #000080;
-    background-image: linear-gradient(180deg, #4a4aa8 0%, #000080 100%);
-    padding: 0 6px;
-    overflow: hidden;
-    border-bottom: 1px solid #000040;
+    background: #e0e0e0;
+    background-image: linear-gradient(180deg, #f0f0f0 0%, #c8c8c8 100%);
+    border-bottom: 2px groove #808080;
+    padding: 8px 6px;
+    text-align: center;
   }
-  .nav-btn {
-    float: left;
-    padding: 5px 14px;
-    color: #ffffff;
-    font: bold 11px Verdana, Arial, sans-serif;
+  .nav button {
+    display: inline-block;
+    font: bold 12px "Times New Roman", Times, serif;
+    padding: 4px 10px;
+    margin: 2px;
+    background: #d8d8d8;
+    border: 2px outset #e8e8e8;
+    color: #000080;
     text-decoration: none;
-    border: none;
-    background: none;
     cursor: pointer;
-    border-right: 1px solid #4a4aa8;
     letter-spacing: 0.3px;
   }
-  .nav-btn:first-child { border-left: 1px solid #4a4aa8; }
-  .nav-btn:hover {
-    background: #ffffcc;
-    color: #000080;
-    text-decoration: none;
-  }
-  .nav-btn.active {
+  .nav button:hover { background: #ffffcc; color: #c00000; }
+  .nav button.active {
     background: #ffffff;
-    color: #000080;
+    border-style: inset;
+    color: #c00000;
+    font-weight: bold;
   }
 
-  .main-area {
-    padding: 12px 14px;
-    background: #ffffff;
-  }
+  .main { padding: 14px 16px 24px; }
 
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
-  .head-line {
-    background: #cccccc;
-    background-image: linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 100%);
-    border: 1px solid #808080;
-    padding: 3px 6px;
-    font-weight: bold;
-    font-size: 11px;
+  h2 {
+    font: bold 20px "Times New Roman", Times, serif;
     color: #000080;
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
+    text-decoration: underline;
+    margin: 22px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000080;
+  }
+  h3 {
+    font: bold 16px "Times New Roman", Times, serif;
+    color: #800000;
+    margin: 16px 0 8px;
   }
 
   p {
-    margin: 0 0 8px;
-    font-size: 11px;
-    line-height: 1.5;
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    text-align: justify;
   }
-  b { color: #000; }
-  .desc { color: #333; }
 
-  ul.bullets, ol.bullets {
-    padding-left: 18px;
-    margin: 0 0 8px;
-    font-size: 11px;
+  ul, ol {
+    margin: 0 0 14px 22px;
+    font-size: 15px;
+    line-height: 1.6;
   }
-  ul.bullets li, ol.bullets li {
-    padding: 1px 0;
-    margin-bottom: 2px;
-  }
-  ul.bullets li i, ol.bullets li i {
-    color: #666;
-    font-style: italic;
-    font-size: 10px;
-  }
-  ul.bullets li b { color: #000080; }
+  ul li, ol li { margin-bottom: 4px; }
+  ul li b, ol li b { color: #000080; }
+  ol li i { color: #800000; font-style: italic; }
 
-  .link-row {
-    padding: 3px 0;
-    border-bottom: 1px dotted #c0c0c0;
-    font-size: 11px;
+  hr {
+    border: none;
+    border-top: 2px inset #c0c0c0;
+    margin: 18px 0;
   }
-  .link-row:last-child { border-bottom: none; }
-  .link-row .tag {
+  hr.dots {
+    border: none;
+    height: 2px;
+    background-image: radial-gradient(circle, #808080 1px, transparent 1px);
+    background-size: 6px 2px;
+    margin: 18px 0;
+  }
+
+  .link-item {
+    padding: 5px 0;
+    font-size: 15px;
+    border-bottom: 1px dashed #a0a0a0;
+  }
+  .link-item:last-child { border-bottom: none; }
+  .link-item .tag {
     display: inline-block;
     background: #000080;
-    color: #fff;
-    font-size: 9px;
-    font-weight: bold;
-    padding: 1px 4px;
-    margin-right: 4px;
-    text-transform: uppercase;
+    color: #ffff00;
+    font: bold 10px Arial, sans-serif;
+    padding: 1px 5px;
+    margin-right: 6px;
     letter-spacing: 0.5px;
-    vertical-align: middle;
-  }
-  .link-row .tag.red { background: #c00000; }
-  .link-row .tag.green { background: #008000; }
-  .link-row .tag.orange { background: #cc6600; }
-
-  .page-title {
-    background: #000080;
-    color: #ffffff;
-    padding: 6px 10px;
-    font: bold 13px Verdana, Arial, sans-serif;
-    letter-spacing: 1px;
     border: 1px solid #000040;
-    margin-bottom: 8px;
   }
-  .page-title .sub {
-    display: block;
-    font-size: 10px;
-    font-weight: normal;
-    color: #ccccff;
-    margin-top: 2px;
-    letter-spacing: 0.5px;
+  .link-item .tag.red { background: #c00000; color: #ffffff; border-color: #600000; }
+  .link-item .tag.orange { background: #cc6600; color: #ffffff; border-color: #803300; }
+  .link-item .tag.green { background: #006600; color: #ffffff; border-color: #003300; }
+
+  .box {
+    background: #ffffe0;
+    border: 2px ridge #808080;
+    padding: 12px 14px;
+    margin: 14px 0;
+    font-size: 14px;
   }
 
+  .warn {
+    background: #fff4c0;
+    border: 2px dotted #c00000;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #800000;
+    margin: 14px 0;
+    text-align: center;
+  }
+
+  .back-wrap { text-align: center; margin: 24px 0 10px; }
   .back-btn {
     display: inline-block;
-    padding: 4px 12px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
+    font: bold 14px "Times New Roman", Times, serif;
+    padding: 8px 22px;
     background: #d8d8d8;
-    background-image: linear-gradient(180deg, #f0f0f0 0%, #c8c8c8 100%);
-    border: 2px outset #d8d8d8;
-    margin-top: 6px;
-    cursor: pointer;
+    border: 3px outset #e8e8e8;
+    color: #000080;
+    text-decoration: none;
+    letter-spacing: 0.5px;
   }
-  .back-btn:hover { text-decoration: none; color: #cc0000; }
+  .back-btn:hover { background: #ffffcc; color: #c00000; }
   .back-btn:active { border-style: inset; }
 
   .footer {
-    border-top: 1px solid #808080;
-    background: #f0f0f0;
-    padding: 8px 10px;
+    background: #000080;
+    color: #c0c0c0;
     text-align: center;
-    font-size: 10px;
-    color: #666;
-    line-height: 1.6;
+    font: 11px "Times New Roman", Times, serif;
+    padding: 10px 8px;
+    letter-spacing: 1px;
+    line-height: 1.7;
   }
 
   .blink {
-    color: #cc0000;
+    color: #c00000;
     font-weight: bold;
     animation: blink 1s step-end infinite;
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  @media (max-width: 800px) {
-    .page { width: 100%; margin: 0; border: none; }
-    .nav-btn { padding: 4px 8px; font-size: 10px; }
-    .masthead .logo { font-size: 20px; }
+  @media (max-width: 700px) {
+    .header h1 { font-size: 26px; letter-spacing: 2px; }
+    .header .sub { font-size: 11px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 15px; }
+    p, ul, ol, .link-item { font-size: 14px; }
+    .nav button { font-size: 11px; padding: 5px 8px; }
+    .main { padding: 12px 12px 20px; }
   }
 </style>
 </head>
@@ -211,122 +208,133 @@
 
 <div class="page">
 
-  <div class="masthead">
-    <a class="logo" href="../">dm<em>.</em></a>
-    <div class="tagline">Официальный сайт · old edition</div>
+  <div class="header">
+    <h1>D M .</h1>
+    <div class="sub">~~ Домашняя страница · 1995 ~~</div>
   </div>
 
   <div class="nav">
-    <button class="nav-btn active" data-tab="home">Главная</button>
-    <button class="nav-btn" data-tab="about">О нас</button>
-    <button class="nav-btn" data-tab="projects">Проекты</button>
-    <button class="nav-btn" data-tab="onyx">Colonia Onyx</button>
-    <button class="nav-btn" data-tab="eyes">Open Eyes In The Game</button>
-    <button class="nav-btn" data-tab="neyti">Neyti</button>
-    <button class="nav-btn" data-tab="links">Ссылки</button>
-    <button class="nav-btn" data-tab="shop">Магазин</button>
+    <button data-tab="home" class="active">Главная</button>
+    <button data-tab="about">О нас</button>
+    <button data-tab="projects">Проекты</button>
+    <button data-tab="onyx">Colonia Onyx</button>
+    <button data-tab="eyes">Open Eyes</button>
+    <button data-tab="neyti">Neyti</button>
+    <button data-tab="links">Ссылки</button>
+    <button data-tab="shop">Магазин</button>
   </div>
 
-  <div class="main-area">
+  <div class="main">
 
     <div class="tab-panel active" data-panel="home">
-      <div class="page-title">
-        Добро пожаловать!
-        <span class="sub">Независимый музыкальный коллектив</span>
-      </div>
-
-      <div class="head-line">◆ О сайте</div>
-      <p class="desc">
-        Это <b>старая версия</b> официального сайта группы <b>dm.</b> —
-        сделана специально для старых компьютеров и медленных соединений.
+      <h2>Добро пожаловать!</h2>
+      <p>
+        Вы попали на <b>домашнюю страницу</b> независимого музыкального коллектива
+        <b>dm.</b> Здесь вы найдёте информацию о наших проектах, ссылки на соцсети
+        и новости.
       </p>
-      <p class="desc">
-        Все разделы доступны сверху. Выбирайте нужную вкладку.
+      <p>
+        Используйте кнопки навигации сверху, чтобы перейти в нужный раздел.
+        Если у вас медленное соединение — не беспокойтесь, страница грузится
+        быстро.
       </p>
 
-      <div class="head-line">◆ Новое на сайте</div>
-      <ul class="bullets">
+      <hr class="dots">
+
+      <h3>◆ Что нового</h3>
+      <ul>
         <li><b>Colonia Onyx</b> — добавлены релизы группы</li>
         <li><b>Open Eyes In The Game</b> — полный треклист альбома</li>
         <li><b>Neyti</b> — новая вкладка с YouTube-каналом</li>
         <li>Обновлены ссылки на OpenVK</li>
       </ul>
+
+      <div class="warn">
+        <span class="blink">★</span> Сайт работает без интернета, без картинок — только текст. <span class="blink">★</span>
+      </div>
     </div>
 
     <div class="tab-panel" data-panel="about">
-      <div class="page-title">
-        О нас
-        <span class="sub">Кто мы и что делаем</span>
-      </div>
-
-      <p class="desc">
+      <h2>О нас</h2>
+      <p>
         Мы — независимый коллектив из Тульской области. У нас четыре проекта:
         <b>Damersimba Music</b>, <b>Colonia Onyx</b>, <b>Open Eyes In The Game</b>
         и <b>Neyti</b>. Пишем песни, выступаем, делаем то, что любим.
       </p>
 
-      <div class="head-line">◆ Наши жанры</div>
-      <ul class="bullets">
+      <hr>
+
+      <h3>◆ Наши жанры</h3>
+      <ul>
         <li>Металкор</li>
         <li>Альтернативный рок</li>
         <li>Нердкор</li>
         <li>Электроника</li>
       </ul>
 
-      <p class="desc">
-        Всё делаем сами — от записи до оформления.
-        Спасибо, что зашли!
+      <p>
+        Всё делаем сами — от записи до оформления. Спасибо, что зашли!
       </p>
     </div>
 
     <div class="tab-panel" data-panel="projects">
-      <div class="page-title">
-        Наши проекты
-        <span class="sub">Четыре направления, один коллектив</span>
-      </div>
+      <h2>Наши проекты</h2>
+      <p>Четыре направления, один коллектив.</p>
 
-      <div class="head-line">◆ Список проектов</div>
-      <ul class="bullets">
-        <li><b>Damersimba Music</b> — просто песни по играм. Скоро будут вокалы.</li>
-        <li><b>Colonia Onyx</b> — металкор из Богородицка, Тульская область.</li>
-        <li><b>Open Eyes In The Game</b> — нердкор-альбом по играм.</li>
-        <li><b>Neyti</b> — нарезки по стримеру DadeGuy.</li>
-      </ul>
+      <hr>
 
-      <div class="head-line">◆ Подробнее</div>
-      <div class="link-row"><span class="tag">DM</span> <a href="../dm-music/">Damersimba Music →</a></div>
-      <div class="link-row"><span class="tag red">ONYX</span> <a href="../colonia-onyx/">Colonia Onyx →</a></div>
-      <div class="link-row"><span class="tag orange">EYES</span> <a href="../open-eyes/">Open Eyes In The Game →</a></div>
-      <div class="link-row"><span class="tag orange">NEYTI</span> <a href="../neyti/">Neyti →</a></div>
+      <h3>◆ Damersimba Music</h3>
+      <p>Просто песни по играм. Скоро будут вокалы.</p>
+
+      <h3>◆ Colonia Onyx</h3>
+      <p>Металкор из Богородицка, Тульская область.</p>
+
+      <h3>◆ Open Eyes In The Game</h3>
+      <p>Нердкор-альбом по играм.</p>
+
+      <h3>◆ Neyti</h3>
+      <p>Нарезки по стримеру DadeGuy.</p>
+
+      <hr class="dots">
+
+      <h3>◆ Подробнее</h3>
+      <div class="link-item"><span class="tag">DM</span> <a href="../dm-music/">Damersimba Music →</a></div>
+      <div class="link-item"><span class="tag red">ONYX</span> <a href="../colonia-onyx/">Colonia Onyx →</a></div>
+      <div class="link-item"><span class="tag orange">EYES</span> <a href="../open-eyes/">Open Eyes In The Game →</a></div>
+      <div class="link-item"><span class="tag orange">NEYTI</span> <a href="../neyti/">Neyti →</a></div>
     </div>
 
     <div class="tab-panel" data-panel="onyx">
-      <div class="page-title">
-        Colonia Onyx
-        <span class="sub">Металкор из Богородицка, Тульская область</span>
-      </div>
+      <h2>Colonia Onyx</h2>
+      <p>
+        Металкор из Богородицка, Тульская область.
+      </p>
 
-      <div class="head-line">◆ Релизы</div>
-      <ul class="bullets">
+      <hr>
+
+      <h3>◆ Релизы</h3>
+      <ul>
         <li>Альбом «The Eliner»</li>
         <li>Трек «Performance»</li>
         <li>Демо-запись «a musician nobody needs»</li>
       </ul>
 
-      <div class="head-line">◆ Ссылки</div>
-      <div class="link-row"><span class="tag red">VK</span> <a href="https://vk.ru/coloni_metalcore">vk.ru/coloni_metalcore</a></div>
-      <div class="link-row"><span class="tag red">TG</span> <a href="https://t.me/colonia_metalcore">t.me/colonia_metalcore</a></div>
-      <div class="link-row"><span class="tag red">4b</span> <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></div>
+      <hr>
+
+      <h3>◆ Ссылки</h3>
+      <div class="link-item"><span class="tag red">VK</span> <a href="https://vk.ru/coloni_metalcore">vk.ru/coloni_metalcore</a></div>
+      <div class="link-item"><span class="tag red">TG</span> <a href="https://t.me/colonia_metalcore">t.me/colonia_metalcore</a></div>
+      <div class="link-item"><span class="tag red">4B</span> <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></div>
     </div>
 
     <div class="tab-panel" data-panel="eyes">
-      <div class="page-title">
-        Open Eyes In The Game
-        <span class="sub">Нердкор-альбом по играм</span>
-      </div>
+      <h2>Open Eyes In The Game</h2>
+      <p>Нердкор-альбом по играм.</p>
 
-      <div class="head-line">◆ Треклист</div>
-      <ol class="bullets">
+      <hr>
+
+      <h3>◆ Треклист</h3>
+      <ol>
         <li><a href="https://band.link/roblox_govno">Roblox</a></li>
         <li><a href="https://youtu.be/JE9sBaNx2Z8">Metal Gear Solid</a></li>
         <li>Zenless Zone Zero <i>(в разработке)</i></li>
@@ -346,71 +354,73 @@
     </div>
 
     <div class="tab-panel" data-panel="neyti">
-      <div class="page-title">
-        Neyti
-        <span class="sub">Канал с нарезками по стримеру DadeGuy</span>
-      </div>
-
-      <p class="desc">
-        <b>Neyti</b> — это канал с нарезками по стримеру <b>DadeGuy</b>
+      <h2>Neyti</h2>
+      <p>
+        Канал с нарезками по стримеру <b>DadeGuy</b>.
       </p>
 
-      <div class="head-line">◆ Ссылки</div>
-      <div class="link-row"><span class="tag orange">YT</span> <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></div>
+      <hr>
+
+      <h3>◆ Ссылки</h3>
+      <div class="link-item"><span class="tag orange">YT</span> <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></div>
     </div>
 
     <div class="tab-panel" data-panel="links">
-      <div class="page-title">
-        Наши ссылки
-        <span class="sub">Все соцсети и платформы</span>
-      </div>
+      <h2>Наши ссылки</h2>
+      <p>Все соцсети и платформы в одном месте.</p>
 
-      <div class="head-line">◆ Damersimba Music</div>
-      <div class="link-row"><span class="tag">TG</span> <a href="https://t.me/dmvair_official">t.me/dmvair_official</a></div>
-      <div class="link-row"><span class="tag">YT</span> <a href="https://www.youtube.com/@DamersimbaMusic">@DamersimbaMusic</a></div>
+      <hr>
 
-      <div class="head-line">◆ Colonia Onyx</div>
-      <div class="link-row"><span class="tag red">VK</span> <a href="https://vk.ru/coloni_metalcore">vk.ru/coloni_metalcore</a></div>
-      <div class="link-row"><span class="tag red">TG</span> <a href="https://t.me/colonia_metalcore">t.me/colonia_metalcore</a></div>
-      <div class="link-row"><span class="tag red">4b</span> <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></div>
+      <h3>◆ Damersimba Music</h3>
+      <div class="link-item"><span class="tag">TG</span> <a href="https://t.me/dmvair_official">t.me/dmvair_official</a></div>
+      <div class="link-item"><span class="tag">YT</span> <a href="https://www.youtube.com/@DamersimbaMusic">@DamersimbaMusic</a></div>
 
-      <div class="head-line">◆ Neyti</div>
-      <div class="link-row"><span class="tag orange">YT</span> <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></div>
+      <h3>◆ Colonia Onyx</h3>
+      <div class="link-item"><span class="tag red">VK</span> <a href="https://vk.ru/coloni_metalcore">vk.ru/coloni_metalcore</a></div>
+      <div class="link-item"><span class="tag red">TG</span> <a href="https://t.me/colonia_metalcore">t.me/colonia_metalcore</a></div>
+      <div class="link-item"><span class="tag red">4B</span> <a href="https://4beat.ru/colonia_metalcore">4beat.ru/colonia_metalcore</a></div>
 
-      <div class="head-line">◆ OpenVK</div>
-      <div class="link-row"><span class="tag green">OK</span> <a href="https://openvk.org/id45128">openvk.org/id45128</a></div>
-      <div class="link-row"><span class="tag green">OK</span> <a href="https://openvk.org/dmvair_official">openvk.org/dmvair_official</a></div>
+      <h3>◆ Neyti</h3>
+      <div class="link-item"><span class="tag orange">YT</span> <a href="https://www.youtube.com/@DadeGaySosiPenis">@DadeGaySosiPenis</a></div>
+
+      <h3>◆ OpenVK</h3>
+      <div class="link-item"><span class="tag green">OK</span> <a href="https://openvk.org/id45128">openvk.org/id45128</a></div>
+      <div class="link-item"><span class="tag green">OK</span> <a href="https://openvk.org/dmvair_official">openvk.org/dmvair_official</a></div>
     </div>
 
     <div class="tab-panel" data-panel="shop">
-      <div class="page-title">
-        Магазин
-        <span class="sub">Мерч, CD и аудиокассеты</span>
-      </div>
-
-      <div class="head-line">◆ Магазин временно закрыт</div>
-      <p class="desc">
+      <h2>Магазин</h2>
+      <p>
         Магазин временно закрыт. <span class="blink">Скоро всё будет!</span>
       </p>
-      <p class="desc">
+      <p>
         Мерч, CD и аудиокассеты появятся здесь в ближайшее время.
       </p>
+
+      <hr>
+
+      <div class="box">
+        <b>◆ Внимание!</b><br>
+        Пока магазин не работает, вы можете следить за новостями
+        в наших соцсетях — ссылки во вкладке «Ссылки».
+      </div>
     </div>
 
-    <a class="back-btn" href="../">← Вернуться на современную версию</a>
+    <div class="back-wrap">
+      <a class="back-btn" href="../">← На современную версию</a>
+    </div>
 
   </div>
 
   <div class="footer">
-    dm. © 2026 ·
-    <span style="color:#888;">[ Это старая версия сайта для старых компьютеров ]</span>
+    dm. © 2026
   </div>
 
 </div>
 
 <script>
 (function () {
-  var buttons = document.querySelectorAll('.nav-btn');
+  var buttons = document.querySelectorAll('.nav button');
   var panels  = document.querySelectorAll('.tab-panel');
 
   function activate(name) {
@@ -423,16 +433,12 @@
     if (history.replaceState) {
       history.replaceState(null, '', '#' + name);
     }
+    window.scrollTo(0, 0);
   }
 
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function (e) {
-      var tab = this.getAttribute('data-tab');
-      if (tab) {
-        e.preventDefault();
-        activate(tab);
-        window.scrollTo(0, 0);
-      }
+    buttons[i].addEventListener('click', function () {
+      activate(this.getAttribute('data-tab'));
     });
   }
 
@@ -449,4 +455,4 @@
 </script>
 
 </body>
-</html>
+                            </html>
